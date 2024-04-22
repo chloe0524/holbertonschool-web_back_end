@@ -24,4 +24,4 @@ async def measure_time(n: int, max_delay: int) -> float:
     await wait_n(n, max_delay)
     timeover = timeit.default_timer()
     total_time = timeover - startingblock
-    return total_time / n
+    return float(total_time / n)
