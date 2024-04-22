@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!usr/bin/env python3
 """coroutine called async_generator that takes no arguments"""
 import asyncio
 import random
