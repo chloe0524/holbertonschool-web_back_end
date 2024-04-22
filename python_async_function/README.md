@@ -1,4 +1,5 @@
-![1_dZBikGD1DDmrqTbhI_qvUw](https://github.com/chloe0524/holbertonschool-web_back_end/assets/127857895/76189116-6ef5-4ea7-8600-4bcae1bef2bc)
+<img src="https://github.com/chloe0524/holbertonschool-web_back_end/assets/127857895/76189116-6ef5-4ea7-8600-4bcae1bef2bc" width="250">
+
 
 ### Python - Async
 
