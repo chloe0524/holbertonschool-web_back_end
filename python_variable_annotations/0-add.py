@@ -1,7 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """function 'add' = 'a float + float b'"""
 
 
 def add(a: float, b: float) -> float:
     """return 'a + b' 'floats'"""
-    return a + b
+    return float(a+b)
