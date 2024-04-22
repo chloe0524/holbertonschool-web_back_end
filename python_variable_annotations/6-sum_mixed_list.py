@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """function 'sum_mixed_list' = 'list mxd-lst' returns sum'"""
 
-import math
 
-mxd_lst = list
+from typing import List, Union
 
 
-def sum_mixed_list(mxd_lst: int and float) -> float:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """return 'mxd_lst' 'list' 'sum' 'float'"""
     return sum(mxd_lst)
