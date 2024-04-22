@@ -10,10 +10,18 @@ wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
 async def measure_time(n: int, max_delay: int) -> float:
-    """Create measure_time to time wait_n + return total_time/n"""
+    """
+    Measures the total execution time
+
+    Args:
+        n (int): number of tasks to be executed
+        max_delay (int): maximum delay in seconds for each task
+
+    Return:
+        float: average time per task
+    """
     startingblock = timeit.default_timer()
     await wait_n(n, max_delay)
     timeover = timeit.default_timer()
     total_time = timeover - startingblock
-    final_time = total_time / n
-    return final_time
+    return total_time / n
