@@ -2,7 +2,6 @@
 """measure_time with n + max_delay andmeasures total exec time """
 
 import asyncio
-import random
 import time
 
 
