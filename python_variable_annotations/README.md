@@ -1,4 +1,4 @@
-<img src="https://github.com/chloe0524/holbertonschool-web_back_end/assets/127857895/ade7cc9a-81b1-4daf-bba3-58a159fc41c0" width="25" height="25">
+<img src="https://github.com/chloe0524/holbertonschool-web_back_end/assets/127857895/ade7cc9a-81b1-4daf-bba3-58a159fc41c0" width="250" height="250">
 
 
 ### Python - Variable Annotations
