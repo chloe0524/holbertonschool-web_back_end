@@ -9,8 +9,15 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
-    """returns 'delay' time."""
+    """returns 'delay' times in ascending order."""
     delays = []
     for _ in range(n):
         delays.append(wait_random(max_delay))
-    return await asyncio.gather(*delays)
+    time_length = await asyncio.gather(*delays)
+    for i in range(len(time_length)):
+        for j in range(len(time_length) - 1):
+            if time_length[j] > time_length[j + 1]:
+                temp = time_length[j]
+                time_length[j] = time_length[j + 1]
+                time_length[j + 1] = temp
+    return time_length
