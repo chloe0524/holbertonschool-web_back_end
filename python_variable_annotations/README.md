@@ -1,3 +1,5 @@
+![OIG2-removebg-preview](https://github.com/chloe0524/holbertonschool-web_back_end/assets/127857895/ade7cc9a-81b1-4daf-bba3-58a159fc41c0)
+
 ### Python - Variable Annotations
 
 1. :round_pushpin:**Basic annotations - add**
