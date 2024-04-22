@@ -3,7 +3,7 @@
 
 import asyncio
 import random
-import timeit
+import time
 
 
 wait_n = __import__('1-concurrent_coroutines').wait_n
@@ -20,8 +20,8 @@ async def measure_time(n: int, max_delay: int) -> float:
     Return:
         float: average time per task
     """
-    startingblock = timeit.default_timer()
-    await wait_n(n, max_delay)
-    timeover = timeit.default_timer()
+    start_time = time.time()
+    asyncio.run(wait_n(n, max_delay))
+    time_over = time.time()
     total_time = timeover - startingblock
     return float(total_time / n)
