@@ -6,8 +6,5 @@ import pymongo
 
 def list_all(mongo_collection):
     """function to return the list"""
-    docs = mongo_collection.find()
-    res = []
-    for doc in docs:
-        res.append(doc)
+    res = list(mongo_collection.find())
     return res
