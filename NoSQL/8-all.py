@@ -1,7 +1,8 @@
 #!usr/bin/env python3
-"""1"""
+"""lists all documents in a collection"""
 
 import pymongo
+
 
 def list_all(mongo_collection):
     docs = mongo_collection.find()
