@@ -1,8 +1,11 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 """lists all documents in a collection"""
 
 
 def list_all(mongo_collection):
     """function to return the list"""
-    res = list(mongo_collection.find())
+    docs = mongo_collection.find()
+    res = []
+    for doc in docs:
+        res.append(doc)
     return res
