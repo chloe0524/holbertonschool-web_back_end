@@ -1,7 +1,6 @@
 //  adds a new attribute to a document in the collection 'school'
-if (db.school.findOne({ "name" : "Holberton school" }))
-{
-    db.school.update(
-        { '$set': { "address": "972 Mission street" } }
-    );
-}
+db.school.update(
+    { "name" : "Holberton school" },
+    { '$set': { "address": "972 Mission street" } },
+    { multi: true }
+)
