@@ -1,2 +1,3 @@
 // lists all documents in the collection 'school'
-db.movies.find()
+use school
+db.school.find()
