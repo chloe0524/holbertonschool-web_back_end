@@ -4,8 +4,7 @@
 
 def update_topics(mongo_collection, name, topics):
     """function that changes all topics of a school"""
-    res = mongo_collection.update_one(
-        {'name': name},
-        {'$set': {'topics': topics}}
+    mongo_collection.update_many(
+        {"name": name},
+        {"$set": {"topics": topics}}
     )
-    return res.modified_count
