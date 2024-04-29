@@ -5,11 +5,7 @@
 from pymongo import MongoClient
 
 
-if __name__ == "__main__":
-    client = MongoClient('mongodb://127.0.0.1:27017')
-    logs_collection = client.logs.nginx
-    log_stats(logs_collection)
-
+def main(nginx_collection):
     counter_logs = nginx_collection.count_documents({})
     print("{} logs".format(counter_logs))
 
@@ -22,3 +18,9 @@ if __name__ == "__main__":
     count = nginx_collection.count_documents({"method": "GET",
                                              "path": "/status"})
     print("{} status check".format(count))
+
+
+if __name__ == "__main__":
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    nginx_collection = client.logs.nginx
+    main(nginx_collection)
