@@ -14,6 +14,7 @@ def main(nginx_collection):
     for method in methods:
         count = nginx_collection.count_documents({"method": method})
         print("\tmethod {}: {}".format(method, count))
+
     # method=GET + path=/status
     count = nginx_collection.count_documents({"method": "GET",
                                              "path": "/status"})
@@ -21,6 +22,7 @@ def main(nginx_collection):
 
 
 if __name__ == "__main__":
-    client = MongoClient('mongodb://127.0.0.1:27017')
-    nginx_collection = client.logs.nginx
+    client = MongoClient()
+    db = client.logs
+    nginx_collection = db.nginx
     main(nginx_collection)
