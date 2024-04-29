@@ -9,4 +9,4 @@ def update_topics(mongo_collection, name, topics):
         {'name': name},
         {'$set': {'topics': topics}}
     )
-    return res
+    return res.modified_count
