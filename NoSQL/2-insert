@@ -1,5 +1,4 @@
 // inserts doc in the collection 'school'
-db.school.insertOne(
-    {name: “Holberton school”},
-    {writeConcern: <document>}
+db.school.insert(
+    {name: “Holberton school”}
 )
