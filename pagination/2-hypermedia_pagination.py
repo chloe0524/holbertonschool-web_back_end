@@ -55,7 +55,7 @@ class Server:
             prev_page = page - 1
 
         return {
-            "page_size": page_size,"page": page,
+            "page_size": page_size, "page": page,
             "data": data,
             "next_page": next_page, "prev_page": prev_page,
             "total_pages": total_pages
