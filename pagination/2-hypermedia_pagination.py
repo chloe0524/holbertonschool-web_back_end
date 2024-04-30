@@ -41,22 +41,22 @@ class Server:
             return []
         return self.dataset()[start:end]
 
+    import math
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
-        """returns dict with key-value pairs"""
+        """Returns a dictionary with pagination information."""
         data = self.get_page(page, page_size)
-        next_page = None
-        previous_page = None
-        total_pages = len(self.dataset()) / page_size
+        prev_page, next_page = None, None
+        total_pages = math.ceil(len(self.dataset()) / page_size)
 
         if page < total_pages:
             next_page = page + 1
         if page > 1:
-            previous_page = page - 1
+            prev_page = page - 1
+
         return {
-            "page_size": page_size,
-            "page": page,
+            "page_size": page_size,"page": page,
             "data": data,
-            "next_page": next_page,
-            "previous_page": previous_page,
+            "next_page": next_page, "prev_page": prev_page,
             "total_pages": total_pages
         }
