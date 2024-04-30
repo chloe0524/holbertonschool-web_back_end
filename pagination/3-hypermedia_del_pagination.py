@@ -41,15 +41,13 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> dict:
         """dict with paginaton"""
-        assert index is not None and index >= 0
-        assert page_size > 0
+        assert index is None or (0 <= index < len(self.__indexed_dataset))
 
         data = []
         next_index = index + page_size
         for current_index in range(index, next_index):
             if current_index in self.__indexed_dataset:
                 data.append(self.__indexed_dataset[current_index])
-
         return {
             'index': index,
             'data': data,
