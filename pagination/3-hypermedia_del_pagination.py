@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""
-Deletion-resilient hypermedia pagination
-"""
+"""Deletion-resilient hypermedia pagination"""
 
 import csv
 import math
-from typing import List
+from typing import List, Dict
 
 
 class Server:
@@ -28,7 +26,7 @@ class Server:
 
         return self.__dataset
 
-    def indexed_dataset(self) -> dict[int, List]:
+    def indexed_dataset(self) -> Dict[int, List]:
         """Dataset indexed by sorting position, starting at 0
         """
         if self.__indexed_dataset is None:
@@ -40,15 +38,14 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> dict:
-        """Returns a dictionary with pagination information."""
+        """method return a dict with key-value pairs"""
         assert index >= 0
         assert page_size > 0
 
-        indexed_dataset = self.indexed_dataset()
-        data = [indexed_dataset[i] for i in range(index, index + page_size)
-                if i in indexed_dataset]
-        next_index = (index + page_size if index +
-                      page_size < len(indexed_dataset)
+        index_data = self.indexed_dataset()
+        data = [index_data[i] for i in range(index, index + page_size)
+                if i in index_data]
+        next_index = (index + page_size if index + page_size < len(index_data)
                       else None)
 
         return {
