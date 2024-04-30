@@ -1,4 +1,6 @@
-## Pagination
+![pagination_python_github_repo](https://github.com/chloe0524/holbertonschool-web_back_end/assets/127857895/e24711c9-1562-4442-b524-84e27991b5e4)
+
+## 📰 Pagination
 
 ### Task 0: Simple Helper Function
 - **Description:** Write a function named `index_range` that takes two integer arguments `page` and `page_size` and returns a tuple containing the start and end indexes for pagination.
