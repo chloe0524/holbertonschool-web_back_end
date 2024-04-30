@@ -53,7 +53,7 @@ class Server:
         if page > 1:
             previous_page = page - 1
         return {
-            "page_size": len(data),
+            "page_size": page_size,
             "page": page,
             "data": data,
             "next_page": next_page,
