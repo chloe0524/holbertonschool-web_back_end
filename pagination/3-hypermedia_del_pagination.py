@@ -40,15 +40,17 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> dict:
-        """dict with paginaton"""
-        assert index is not None and index >= 0
+        """Returns a dictionary with pagination information."""
+        assert index >= 0
         assert page_size > 0
 
-        data = []
-        next_index = index + page_size
-        for current_index in range(index or 0, next_index):
-            if current_index in self.__indexed_dataset:
-                data.append(self.__indexed_dataset[current_index])
+        indexed_dataset = self.indexed_dataset()
+        data = [indexed_dataset[i] for i in range(index, index + page_size)
+                if i in indexed_dataset]
+        next_index = (index + page_size if index +
+                      page_size < len(indexed_dataset)
+                      else None)
+
         return {
             'index': index,
             'data': data,
