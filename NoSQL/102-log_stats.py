@@ -21,6 +21,7 @@ def main(nginx_collection):
     logs = nginx_collection.find({"method": "GET", "path": "/status"})
     print(f"{len(list(logs))} status check")
 
+    print("IPs:")
     ip_counter = Counter()
     for log in nginx_collection.find():
         ip_counter[log['ip']] += 1
