@@ -1,4 +1,4 @@
-export default function createEmployeesObject(departmentName, employees) {
+export default (departmentName, employees) => {
   return {
     [departmentName]: Array(employees),
   };
