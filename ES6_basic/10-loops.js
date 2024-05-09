@@ -1,7 +1,7 @@
-/* eslint-disable */
+/* eslint-disable */ 
 export default (array, appendString) => {
-  for (const idx of array) {
-    const value = array[idx];
+  for (const value of array) {
+    const idx = array.indexOf(value);
     array[idx] = appendString + value;
   }
 
