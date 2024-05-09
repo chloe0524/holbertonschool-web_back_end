@@ -1,5 +1,3 @@
-export default (departmentName, employees) => {
-  return {
-    [departmentName]: Array(employees),
-  };
-}
+export default (departmentName, employees) => ({
+  [departmentName]: employees,
+});
