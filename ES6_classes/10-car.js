@@ -1,11 +1,12 @@
+/* eslint-disable */
 export default class Car {
   constructor(brand, motor, color) {
-    this.brand = brand;
-    this.motor = motor;
-    this.color = color;
-  }
+    this._brand = brand;
+    this._motor = motor;
+    this._color = color;
+  };
 
   cloneCar() {
-    return new this.constructor(this.brand, this.motor, this.color);
-  }
-}
+    return new this.constructor(this._brand, this._motor, this._color);
+  };
+};
