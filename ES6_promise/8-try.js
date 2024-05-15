@@ -1,1 +1,4 @@
-export default (numerator, denominator) => (denominator === 0 ? Promise.reject(new Error('cannot divide by 0')) : Promise.resolve(numerator / denominator));
+export default (numerator, denominator) => {
+  if (denominator === 0) throw new Error('cannot divide by 0');
+  return numerator / denominator;
+};
