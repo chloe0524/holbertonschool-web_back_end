@@ -1,4 +1,4 @@
-![readme_es6_data_manip](https://github.com/chloe0524/holbertonschool-web_back_end/assets/127857895/2d7ec46b-e7c5-42df-be9b-68eae262e6c2)
+![readme_es6_data_manip](https://github.com/chloe0524/holbertonschool-web_back_end/assets/127857895/c64a4c1f-7a01-4985-b895-1284442e387a)
 
 ### :round_pushpin: 0. Basic list of objects
 **Mandatory**
