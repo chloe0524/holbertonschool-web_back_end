@@ -1,4 +1,4 @@
-# ES6 Data Manipulation
+![readme_es6_data_manip](https://github.com/chloe0524/holbertonschool-web_back_end/assets/127857895/2d7ec46b-e7c5-42df-be9b-68eae262e6c2)
 
 ### :round_pushpin: 0. Basic list of objects
 **Mandatory**
