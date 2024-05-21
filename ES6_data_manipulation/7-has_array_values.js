@@ -1,1 +1,1 @@
-export default (set, array) => array.every((element) => set.has(element));
+export default (set, array) => array.reduce((exists, element) => exists && set.has(element), true);
